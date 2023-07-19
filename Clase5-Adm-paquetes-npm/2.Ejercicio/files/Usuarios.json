@@ -1,0 +1,24 @@
+[
+	{
+		"nombre": "Andrea",
+		"apellido": "Lopez",
+		"nombre_usuario": "AndLop",
+		"contrasena": "12345",
+		"id": 1
+	},
+	{
+		"nombre": "Juan",
+		"apellido": "Perez",
+		"nombre_usuario": "JuanPe",
+		"contrasena": "J1234",
+		"id": 2
+	},
+	{
+		"nombre": "Fernando",
+		"apellido": "Gutierrez",
+		"nombre_usuario": "fgutierrez",
+		"contrasena": "e12517da6fe0bd37104d3ab608540d9f0c2202826a07ad181ea3c1b5b838bada",
+		"id": 3,
+		"salt": "hGI2lqJPFNuMoBKjVMPgQTODwuTavInDrrjhxpAkdIBZZiihFlQlUp7KVDNZPIzhe/I5Ev6IDrNaumVCsMX3QZih5Oq3GX9vJ7hMXoYQv+gA9z3qVohxd9pkVu/5f7kZRmVsIEHlX1wKg05S8usfb+pNrjGO89EYTFQz3WQ8YZM="
+	}
+]
