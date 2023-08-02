@@ -5,9 +5,11 @@ import mongoose from "mongoose";
 import handlebars from "express-handlebars";
 import __dirname from "./utils.js";
 import initializedPassport from "./config/passport.config.js";
+import { authToken, generateToken } from "./utils.js";
 
 import viewRouter from "./routes/views.router.js";
 import sessionRouter from "./routes/session.router.js";
+import jwtRouter from "./routes/jwt.router.js";
 import passport from "passport";
 
 //CONEXION A LA BASE DEDATOS
@@ -55,6 +57,7 @@ app.use(passport.session());
 //ROUTES
 app.use("/", viewRouter); //usamos el middleware que mostrará la vista
 app.use("/api/sessions", sessionRouter);
+app.use("/api/jwt", jwtRouter);
 
 //LEVANTAMOS EL SERVER
 const server = app.listen(PORT, () => console.log("Servidor arriba"));

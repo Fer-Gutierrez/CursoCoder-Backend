@@ -50,11 +50,11 @@ app.use(
 
 initializedPassport();
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session({ secret: "SecretCoders" }));
 
 //ROUTES
 app.use("/", viewRouter); //usamos el middleware que mostrará la vista
-app.use("/api/sessions", sessionRouter);
+app.use("/api/session", sessionRouter);
 
 //LEVANTAMOS EL SERVER
 const server = app.listen(PORT, () => console.log("Servidor arriba"));

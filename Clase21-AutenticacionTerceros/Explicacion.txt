@@ -1,0 +1,4 @@
+La autenticacion por terceros se utiliza para darle al usuario que visita nuesstra pagina que se registre y autentique de una manera mas rapida y sin tener que completar los datos en la pagina:
+Para esto utilizaria una aplicacion de terceros para autenticarse, como Google, Facebook, Instagram.
+
+Vamos a utilizar GitHub como cuenta de tercero.
