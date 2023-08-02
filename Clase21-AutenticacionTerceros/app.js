@@ -50,7 +50,7 @@ app.use(
 
 initializedPassport();
 app.use(passport.initialize());
-app.use(passport.session({ secret: "SecretCoders" }));
+app.use(passport.session({ secret: "palabraSecreta" }));
 
 //ROUTES
 app.use("/", viewRouter); //usamos el middleware que mostrará la vista
