@@ -1,7 +1,7 @@
 import { Router } from "express";
 import jwt from "jsonwebtoken";
 
-const user = {
+let user = {
   name: "",
   age: "",
   role: "",
@@ -19,9 +19,17 @@ export default class RuteoApp {
 
   init() {}
 
-  get(path, ...callbacks) {
-    this.router.get(path, this.appyCallbacks(callbacks));
-  }
+  // get(path, ...callbacks) {
+  //   this.router.get(path, this.appyCallbacks(callbacks));
+  // }
+
+  // post(path, ...callbacks) {
+  //   this.router.get(path, this.appyCallbacks(callbacks));
+  // }
+
+  // put(path, ...callbacks) {
+  //   this.router.get(path, this.appyCallbacks(callbacks));
+  // }
 
   appyCallbacks(callbacks) {
     return callbacks.map((callback) => async (...params) => {
@@ -35,6 +43,7 @@ export default class RuteoApp {
   }
 
   generateCustomRespopnses = (req, res, next) => {
+    console.log(req.header.authorization);
     res.sendSuccess = (payload, status = 200) =>
       res.status(status).send({ status: "success", payload });
 
@@ -49,16 +58,17 @@ export default class RuteoApp {
         return next();
       }
 
-      const validar = req.header.authorization;
+      const validar = req.headers.authorization;
+
       if (!validar) {
         return res.sendError("No autorizado", 401);
       }
 
       const token = validar.split(" ")[1];
-      const user = jwt.verify(token, SECRET_ID);
+      const user = jwt.verify(token, "SecretWordTokenJWT");
 
-      if (!roles.includes(`${user.role}`.toUpperCase())) {
-        return res.sendError("Accesso Denegado", 403);
+      if (!roles.includes(user.role.toUpperCase())) {
+        return res.sendError("Acceso Denegado", 403);
       }
       req.user = user;
       next();
@@ -75,19 +85,19 @@ export default class RuteoApp {
   }
 
   put(path, roles, ...callbacks) {
-    this.router.get(
+    this.router.put(
       path,
-      this.generateCustomRespopnses,
       this.validadorRoles(roles),
+      this.generateCustomRespopnses,
       this.appyCallbacks(callbacks)
     );
   }
 
   post(path, roles, ...callbacks) {
-    this.router.get(
+    this.router.post(
       path,
-      this.generateCustomRespopnses,
       this.validadorRoles(roles),
+      this.generateCustomRespopnses,
       this.appyCallbacks(callbacks)
     );
   }
