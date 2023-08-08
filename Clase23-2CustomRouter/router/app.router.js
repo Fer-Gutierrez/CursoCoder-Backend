@@ -43,7 +43,7 @@ export default class RuteoApp {
   }
 
   generateCustomRespopnses = (req, res, next) => {
-    console.log(req.header.authorization);
+    console.log(req.headers.authorization);
     res.sendSuccess = (payload, status = 200) =>
       res.status(status).send({ status: "success", payload });
 
