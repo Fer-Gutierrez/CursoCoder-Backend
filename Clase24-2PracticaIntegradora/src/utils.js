@@ -1,6 +1,5 @@
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import bcrypt, { genSalt, genSaltSync } from "bcrypt";
 
 //Metodo para crear el HASH
 export const createHash = (password) =>
