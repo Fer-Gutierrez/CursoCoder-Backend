@@ -19,7 +19,7 @@ class UserController {
   }
   async getUser(req, res) {
     try {
-      const {email} = req.body;
+      const { email } = req.body;
       const response = await userService.getUser(email);
       res.status(201).json({
         user: response,

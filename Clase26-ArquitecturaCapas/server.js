@@ -18,7 +18,7 @@ const connection = mongoose.connect(
 );
 
 app.use("/api/users", userRouter.getRouter());
-app.use("/api/toys", toyRouter);
+app.use("/api/toys", toyRouter.getRouter());
 
 const server = app.listen(8080, () => {
   console.log("ServerArriba ");
