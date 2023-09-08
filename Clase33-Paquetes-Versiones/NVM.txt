@@ -1,0 +1,7 @@
+Node Version Manager:
+NVM es un software que nos permitirá descargar, instalar y cambiar de versiones de node siempre que lo necesitemos.
+Sí, podemos contar con un conjunto de entornos distintos para poder trabajar con múltiples proyectos que requieran ciertas compatibilidades, sin afectar los proyectos con los que previamente trabajamos. 
+Además, éste nos puede servir para probar las funcionalidades de los nuevos releases de node antes de que sean implementados en sus versiones estables (como el más reciente --watch que hace frente a nodemon)
+
+----
+Algunos proyectos pueden presentar errores de compatibilidad entre versiones de dependencias y la version de node que se encuentra instalada.
