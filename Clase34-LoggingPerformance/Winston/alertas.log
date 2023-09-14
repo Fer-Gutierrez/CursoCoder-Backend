@@ -1,0 +1,10 @@
+2023-09-12T22:55:30.203Z - warning: GET en /
+2023-09-12T22:55:30.205Z - warning: Alerta warning
+2023-09-12T22:55:32.582Z - warning: GET en /
+2023-09-12T22:55:32.583Z - warning: Alerta warning
+2023-09-12T22:55:34.782Z - warning: GET en /
+2023-09-12T22:55:34.783Z - warning: Alerta warning
+2023-09-12T22:56:15.949Z - warning: GET en /
+2023-09-12T22:56:15.951Z - warning: Alerta warning
+[33mwarning[39m: GET en / {"timestamp":"2023-09-12T22:59:42.612Z"}
+[33mwarning[39m: Alerta warning {"timestamp":"2023-09-12T22:59:42.614Z"}
