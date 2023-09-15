@@ -10,7 +10,7 @@ const levelOptions = {
   },
   colors: {
     fatal: "red",
-    erro: "orange",
+    error: "orange",
     warning: "yellow",
     info: "blue",
     debug: "white",
